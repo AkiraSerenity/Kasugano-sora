@@ -3,28 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kasugano Sora - Informasi Karakter Rinci & Cerita Yosuga no Sora</title>
+    <title>Kasugano Sora - Informasi Karakter Rinci & Galeri</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Roboto', sans-serif; /* Menggunakan font Roboto dari Google Fonts */
+            font-family: 'Roboto', sans-serif;
             line-height: 1.6;
-            margin: 0; /* Menghilangkan margin default body */
-            background-color: #f0f2f5; /* Latar belakang body abu-abu terang */
-            color: #333;
+            margin: 0;
+            background-color: #1a2a3a; /* Biru tua */
+            color: #e0e0e0;
             scroll-behavior: smooth;
         }
 
-        /* HEADER inspired by ScalaCube banner */
         .header {
-            background-color: #2a2a2a; /* Warna latar belakang gelap */
-            background-image: linear-gradient(to right, #4a4a4a, #2a2a2a); /* Gradien gelap */
+            background-color: #008080; /* Warna teal baru */
+            background-image: linear-gradient(to right, #006666, #008080); /* Gradien teal yang lebih gelap ke lebih terang */
             color: #ffffff;
             padding: 30px 20px;
             text-align: center;
             box-shadow: 0 4px 10px rgba(0,0,0,0.2);
             position: relative;
-            overflow: hidden; /* Untuk efek overlay */
+            overflow: hidden;
         }
         .header::before {
             content: '';
@@ -33,30 +32,30 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('https://via.placeholder.com/1200x200/4a4a4a/ffffff?text=Background+Pattern'); /* Placeholder untuk pattern atau grafik */
+            background-image: url('https://via.placeholder.com/1200x200/006666/ffffff?text=Background+Pattern'); /* Placeholder background disesuaikan */
             background-size: cover;
-            opacity: 0.1; /* Transparansi overlay */
+            opacity: 0.1;
             pointer-events: none;
         }
         .header h1 {
-            color: #ffffff; /* Judul header putih */
-            font-size: 3em; /* Ukuran lebih besar */
-            margin-bottom: 10px;
+            color: #ffffff;
+            font-size: 3em;
+            margin: 0;
             letter-spacing: 2px;
             font-weight: 700;
-            position: relative; /* Agar di atas pseudo-element */
+            position: relative;
             z-index: 1;
         }
         .header p {
             font-size: 1.1em;
-            color: #ccc;
+            color: #ffffff;
             margin-bottom: 20px;
             position: relative;
             z-index: 1;
         }
         .header .main-button {
             display: inline-block;
-            background-color: #e65100; /* Warna oranye terang untuk tombol */
+            background-color: #004d4d; /* Warna tombol disesuaikan agar terlihat di teal */
             color: #ffffff;
             padding: 12px 30px;
             border-radius: 5px;
@@ -69,25 +68,25 @@
             z-index: 1;
         }
         .header .main-button:hover {
-            background-color: #ff6f00;
+            background-color: #008080; /* Warna hover tombol disesuaikan */
         }
 
         .container {
             max-width: 850px;
-            margin: 30px auto; /* Memberi jarak dari header/footer */
-            background: #fff;
+            margin: 30px auto;
+            background: #2a3a4a; /* Warna kontainer tetap biru tua */
             padding: 25px 35px;
             border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
         }
 
         h2 {
-            color: #e65100; /* Warna oranye gelap untuk sub-judul */
+            color: #ffffff;
             font-size: 1.6em;
             margin-top: 25px;
             margin-bottom: 12px;
             padding-bottom: 4px;
-            border-bottom: 2px solid #f0f0f0; /* Garis bawah abu-abu terang */
+            border-bottom: 2px solid #4a5a6a;
         }
         .character-info img {
             display: block;
@@ -95,7 +94,7 @@
             max-width: 85%;
             height: auto;
             border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
             transition: transform 0.3s ease-in-out;
         }
         .character-info img:hover {
@@ -109,7 +108,7 @@
         .info-item strong {
             flex-shrink: 0;
             width: 160px;
-            color: #444; /* Warna label sedikit lebih gelap */
+            color: #b0b0b0;
             font-size: 1em;
             padding-right: 10px;
         }
@@ -121,6 +120,7 @@
             text-align: justify;
             margin-bottom: 0.8em;
             font-size: 0.98em;
+            color: #d0d0d0;
         }
         ul {
             list-style: disc;
@@ -130,40 +130,95 @@
         ul li {
             margin-bottom: 6px;
             font-size: 0.98em;
+            color: #d0d0d0;
         }
         hr {
             border: 0;
             height: 1px;
-            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(230, 81, 0, 0.75), rgba(0, 0, 0, 0)); /* Garis oranye gradien */
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0));
             margin: 30px 0;
         }
         .note {
-            background-color: #fff3e0; /* Oranye sangat muda */
-            border-left: 5px solid #ff9800;
+            background-color: #3a4a5a;
+            border-left: 5px solid #ffcc00;
             padding: 12px;
             margin-top: 20px;
             border-radius: 5px;
-            color: #333;
+            color: #f0f0f0;
             font-style: italic;
             font-size: 0.95em;
         }
 
-        /* Footer - simple but consistent with theme */
+        /* Gaya untuk Galeri Gambar */
+        .gallery-section h2 {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .gallery-item {
+            flex: 1 1 calc(33.333% - 40px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #3a4a5a;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            min-width: 280px;
+        }
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+        .image-caption {
+            padding: 15px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #d0d0d0;
+            background-color: #2a3a4a;
+        }
+
+        /* Footer */
         .footer {
             text-align: center;
             padding: 20px;
             margin-top: 40px;
-            background-color: #2a2a2a; /* Warna gelap konsisten dengan header */
-            color: #ccc;
+            background-color: #1a1a1a;
+            color: #aaa;
             font-size: 0.85em;
-            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
         }
         .footer a {
-            color: #ff9800; /* Link oranye */
+            color: #ffffff;
             text-decoration: none;
         }
         .footer a:hover {
             text-decoration: underline;
+        }
+
+        /* Media Queries untuk Responsif */
+        @media (max-width: 768px) {
+            .gallery-item {
+                flex: 1 1 calc(50% - 30px);
+            }
+        }
+        @media (max-width: 480px) {
+            .gallery-item {
+                flex: 1 1 100%;
+            }
+            .container {
+                padding: 15px 20px;
+            }
         }
     </style>
 </head>
@@ -171,13 +226,14 @@
     <div class="header">
         <h1>Birza ❤ Sora</h1>
         <p></p>
+        <a href="#galeri-sora" class="main-button">Kasugano Sora</a>
     </div>
 
     <div class="container">
-        <h2 style="text-align: center;">Informasi Karakter: Kasugano Sora (春日野 穹)</h2>
+        <h2 style="text-align: center;">Kasugano Sora (春日野 穹)</h2>
         <div class="character-info">
-            <img id="sora-image" src="https://cs11.pikabu.ru/post_img/big/2018/07/25/1/1532470420118136013.jpg" alt="Visual Kasugano Sora dari Visual Novel">
-            <p id="image-caption" style="text-align: center; font-style: italic; color: #777; margin-top: -15px; font-size: 0.9em;">-</p>
+            <img id="sora-image" src="https://via.placeholder.com/600x400/C0C0C0/FFFFFF?text=Kasugano+Sora" alt="Visual Novel Kasugano Sora">
+            <p id="image-caption" style="text-align: center; font-style: italic; color: #b0b0b0; margin-top: -15px; font-size: 0.9em;">-</p>
 
             <h2>Detail Pribadi</h2>
             <div class="info-item">
@@ -250,14 +306,83 @@
             <p id="peran-vn-tema-sora"></p>
 
             <div class="note">
-                Peringatan: Kasugano Sora adalah istri Birza
+                Kasugano Sora adalah istri Birza
+            </div>
+        </div>
+
+        <hr id="galeri-sora">
+        <div class="gallery-section">
+            <h2>Kasugano Sora</h2>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="https://rare-gallery.com/uploads/posts/231480-sora-kasugano-3440x2800.jpg" alt="Kasugano Sora Gambar 1">
+                    <div class="image-caption"></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://w.wallhaven.cc/full/nm/wallhaven-nmoox9.jpg" alt="Kasugano Sora Gambar 2">
+                    <div class="image-caption"></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://w.wallhaven.cc/full/4l/wallhaven-4lggll.jpg" alt="Kasugano Sora Gambar 3">
+                    <div class="image-caption"></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://w.wallhaven.cc/full/j8/wallhaven-j83gp5.png" alt="Kasugano Sora Gambar 4">
+                    <div class="image-caption"></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://w.wallhaven.cc/full/nm/wallhaven-nmdr8k.jpg" alt="Kasugano Sora Gambar 5">
+                    <div class="image-caption"></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://w.wallhaven.cc/full/4v/wallhaven-4vq65n.jpg" alt="Kasugano Sora Gambar 6">
+                    <div class="image-caption"></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://th.bing.com/th/id/OIP.cW5LZF1NInSmdxbwSyF2lAHaE1?w=780&h=509&rs=1&pid=ImgDetMain&cb=idpwebp1&o=7&rm=3" alt="Kasugano Sora Gambar 7">
+                    <div class="image-caption"></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://wallpaperaccess.com/full/2363070.jpg" alt="Kasugano Sora Gambar 8">
+                    <div class="image-caption"></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://cdn.wallpapersafari.com/6/3/jzV5lm.jpg" alt="Kasugano Sora Gambar 9">
+                    <div class="image-caption"></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://w.wallhaven.cc/full/vq/wallhaven-vqgr9p.jpg" alt="Kasugano Sora Gambar 10">
+                    <div class="image-caption"></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://w.wallhaven.cc/full/zx/wallhaven-zx5q2g.png" alt="Kasugano Sora Gambar 11">
+                    <div class="image-caption"></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://w.wallhaven.cc/full/p2/wallhaven-p2ywme.jpg" alt="Kasugano Sora Gambar 12">
+                    <div class="image-caption"></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://w.wallhaven.cc/full/42/wallhaven-4231zy.jpg" alt="Kasugano Sora Gambar 13">
+                    <div class="image-caption"></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://w.wallhaven.cc/full/4g/wallhaven-4g3e7q.png" alt="Kasugano Sora Gambar 14">
+                    <div class="image-caption"></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://w.wallhaven.cc/full/49/wallhaven-496zld.jpg" alt="Kasugano Sora Gambar 15">
+                    <div class="image-caption"></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://w.wallhaven.cc/full/49/wallhaven-496zld.jpg" alt="Kasugano Sora Gambar 16">
+                    <div class="image-caption"></div>
             </div>
         </div>
     </div>
 
     <div class="footer">
-        <p>&copy; Kasugano Sora. </p>
-        <p>Dibuat oleh Birza untuk Sora.</p>
+        <p>&copy; 2025 16 Juni Birza. All rights Reserved.</p>
     </div>
 
     <script>
@@ -269,11 +394,11 @@
             zodiak: "Aquarius",
             golonganDarah: "A",
             tinggiBadan: "152 cm",
-            warnaRambut: "Putih keperakan (Platinum Blonde / Silver White)",
-            warnaMata: "Biru langit yang jernih",
+            warnaRambut: "#e8e4db",
+            warnaMata: "#4e4c40",
             seiyuu: "Hiroko Taguchi",
 
-            latarBelakang: "Sora adalah adik kembar dari Kasugano Haruka, meskipun seringkali terlihat lebih muda dan lebih rapuh. Sejak lahir, ia menderita kondisi kesehatan yang sangat lemah, menghabuskannya sering menghabiskan waktu di rumah sakit dan membatasi interaksi sosialnya.",
+            latarBelakang: "Sora adalah adik kembar dari Kasugano Haruka, meskipun seringkali terlihat lebih muda dan lebih rapuh. Sejak lahir, ia menderita kondisi kesehatan yang sangat lemah, menghabiskannya sering menghabiskan waktu di rumah sakit dan membatasi interaksi sosialnya.",
             detailLatarBelakang: "Kesehatan yang buruk ini membuatnya sering terisolasi dari dunia luar dan bergantung penuh pada Haruka. Setelah kematian tragis kedua orang tua mereka dalam kecelakaan, Sora dan Haruka pindah ke desa terpencil Okukozome, tempat kakek-nenek mereka dulu tinggal. Lingkungan baru ini, meskipun damai, juga menjadi panggung bagi pengembangan hubungan mereka yang rumit dan tabu.",
 
             kepribadian: "Sora adalah karakter yang kompleks dengan kepribadian yang cenderung kontradiktif.",
@@ -298,11 +423,11 @@
             // Cerita Visual Novel Yosuga no Sora
             ceritaVnPengantar: "Yosuga no Sora (ヨスガノソラ) adalah visual novel dewasa Jepang yang dikembangkan oleh Sphere, dirilis pada tahun 2008. Kisahnya berpusat pada Kasugano Haruka dan adik kembarnya, Sora, yang pindah ke sebuah desa terpencil setelah kehilangan kedua orang tua mereka dalam kecelakaan. Mereka pindah ke rumah lama kakek-nenek mereka, sebuah tempat penuh kenangan masa kecil.",
             ceritaVnAlur: "Alur cerita Yosuga no Sora sangat non-linier, khas visual novel, di mana pemain membuat pilihan yang mengarah ke rute cerita yang berbeda, masing-masing berfokus pada salah satu heroine utama (Sora, Akira, Kazuha, Nao). Setiap rute mengeksplorasi hubungan Haruka dengan karakter yang dipilih, seringkali menghadapi tantangan moral, sosial, dan emosional.",
-            ceritaVnTema: "Tema utama yang dieksplorasi dalam visual novel ini adalah cinta yang terlarang, isolasi, ketergantungan emosional, dan kebebasan untuk memilih jalan hidup sendiri terlepas dari norma masyarakat. Ini adalah narasi yang berani dan seringkali kontroversial yang memicu banyak diskusi di kalangan penggemar.",
+            ceritaVnTema: "Tema utama yang dieksplorasi dalam visual novel ini adalah cinta yang terlarang, isolasi, ketergantungan emosional, dan kebebasan untuk memilih jalan hidup sendiri terlepas dari norma masyarakat.",
             ceritaVnPilihan: "Meskipun ada beberapa rute, rute Sora seringkali dianggap sebagai 'rute sejati' atau yang paling menonjol karena eksplorasinya yang mendalam terhadap hubungan inses antara saudara kembar, dan konsekuensi psikologis serta sosialnya."
         };
 
-        // Mengisi data ke HTML
+        // Mengisi data karakter ke HTML
         document.getElementById('nama-lengkap').textContent = soraData.namaLengkap;
         document.getElementById('kanji').textContent = soraData.kanji;
         document.getElementById('ulang-tahun').textContent = soraData.ulangTahun;
@@ -341,10 +466,11 @@
         document.getElementById('cerita-vn-tema').textContent = soraData.ceritaVnTema;
         document.getElementById('cerita-vn-pilihan').textContent = soraData.ceritaVnPilihan;
 
+        // Gambar utama di bagian informasi karakter
+        document.getElementById('sora-image').src = 'https://cs11.pikabu.ru/post_img/big/2018/07/25/1/1532470420118136013.jpg';
+        document.getElementById('image-caption').textContent = 'Visual Kasugano Sora dari Visual Novel Yosuga no Sora.';
 
-        // Ganti URL gambar di sini
-        // Contoh: document.getElementById('sora-image').src = 'url_gambar_sora_anda.jpg';
-        // Atau: document.getElementById('sora-image').src = 'https://example.com/kasugano_sora_visual_novel.png';
+        // --- PENTING: Ganti URL placeholder di bawah ini dengan URL gambar Sora Anda yang sebenarnya! ---
     </script>
 </body>
 </html>
